@@ -23,10 +23,10 @@ class FirstSampleTest(unittest.TestCase):
             "console": 'true', # Enable or disable console logs
             "network":'true'   # Enable or disable network logs
         }
-        # self.driver = webdriver.Remote(
-        #     command_executor="https://{}:{}@hub.lambdatest.com/wd/hub".format(username, access_key),
-        #     desired_capabilities= desired_caps)
-        self.driver = webdriver.Chrome(options=chrome_options)
+        self.driver = webdriver.Remote(
+            command_executor="https://{}:{}@hub.lambdatest.com/wd/hub".format(username, access_key),
+            desired_capabilities= desired_caps)
+        # self.driver = webdriver.Chrome(options=chrome_options)
 
 
 # tearDown runs after each test case
